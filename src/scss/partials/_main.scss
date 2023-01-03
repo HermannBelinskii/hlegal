@@ -1,0 +1,104 @@
+.main{
+    background: $white; 
+}
+
+.violet-block{
+    background: $main-bg-color;
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    margin-bottom: 20px;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 100%;
+        bottom: 50%;
+        background: #CACADB;
+        border-radius: 0px 0px 12px 12px;
+        height: 10px;
+        z-index: 2;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        top: 100%;
+        bottom: 0;
+        background: #E7E7F2;
+        border-radius: 0px 0px 12px 12px;
+        height: 20px;
+        z-index: 1;
+    }
+    &__bg{
+        background-image: url('../img/svgicons/symbol.svg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 50px 160px 30px;
+        position: relative;
+        margin-bottom: 60px;
+    }
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 44px;
+    margin: 0;
+    text-align: center;
+}
+
+.scroll-dawn{
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba($color: $white, $alpha: 0.5);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    &:hover{
+        border-color: rgba($color: $accent-color, $alpha: 0.5)
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 11px;
+        width: 18px;
+        height: 18px;
+        border-bottom: 2px solid $white;
+        border-left: 2px solid $white;
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
+    &:hover::before{
+        border-bottom: 2px solid $accent-color;
+        border-left: 2px solid $accent-color; 
+    }
+}
+
+@media screen and (max-width:1919px) {
+    .violet-block__bg{
+        padding: 50px 60px 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .violet-block__bg{
+        padding: 0 0 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .heading{
+        padding: 0 30px;
+    }
+}

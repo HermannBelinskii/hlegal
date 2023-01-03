@@ -1,0 +1,106 @@
+.services{
+    padding: 0 160px 60px;
+    &__title{
+        margin: 0 0 60px;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 42px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__list{
+        display: flex;
+        gap: 60px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    &__item{
+        width: calc(100%/3 - 40px);
+        list-style: none;
+    }
+    &__img{
+        width: 64px;
+        height: 64px;
+        background: $white;
+        border-radius: 24px;
+        text-align: center;
+        padding: 14px;
+        margin-bottom: 30px;
+    }
+    &__heading{
+        margin: 0 0 15px;
+    }
+    &__link{
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: $main-heading-color;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    &__text{
+        margin: 0;
+    }
+}
+
+.main-link{
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    color: $main-heading-color;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 10px;
+    &:hover{
+        color: $accent-color;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: -8px;
+        width: 5px;
+        height: 5px;
+        border-top: 2px solid $main-heading-color;
+        border-right: 2px solid $main-heading-color;
+        transform: rotate(45deg);
+    }
+    &:hover::after{
+        border-top: 2px solid $accent-color;
+        border-right: 2px solid $accent-color;
+    }
+}
+
+@media screen and (max-width:1919px) {
+    .services{
+        padding: 0 60px 60px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .services__item{
+        width: calc(100%/2 - 30px);
+    }
+}
+
+@media screen and (max-width:767px) {
+    .services{
+        padding: 0 30px 60px;
+    }
+    .services__list{
+        gap: 30px;
+    }
+    .services__title{
+        margin: 0 0 30px;
+    }
+    .services__item{
+        width: 100%;
+    }
+    .services__title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+}

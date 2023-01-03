@@ -1,0 +1,213 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__box{
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+    }
+    &__line{
+        display: flex;
+        gap: 18px;
+    }
+    &__tel-numb{
+        color: $white;
+    }
+    &__social-link{
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/svgicons/Facebook-Header.svg);
+        &:hover{
+            background-image: url(../img/svgicons/facebook-header-hover.svg);
+        }
+    }
+}
+
+.logo-services{
+    position: relative;
+    &::after{
+        content: 'services';
+        position: absolute;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+        color: $white;
+        top: 0;
+        left: 123%;
+    }
+    &::before{
+        content: '/';
+        position: absolute;
+        width: 21px;
+        height: 47px;
+        color: $accent-color;
+        top: 10px;
+        left: 105%;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+}
+
+.header-services{
+    padding: 50px 160px 60px;
+    box-sizing: border-box;
+}
+
+.lang-switcher{
+    padding: 0;
+    display: flex;
+    margin: 0;
+    &__item{
+        list-style: none;
+        padding: 0;
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+        font-size: 12px;
+        width: 33px;
+        height: 25px;
+        display: block;
+        text-align: center;
+        &:hover{
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+        &.active{
+            background: $accent-color;
+            border-radius: 8px;
+        }
+    }
+}
+
+.address{
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.tel-numb{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    &:hover{
+        color: $accent-color;
+    }
+}
+
+.social-link{
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    text-decoration: none;
+}
+
+.main-dot{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 9px;
+        right: -11px;
+        background: $white;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+}   
+
+@media screen and (max-width:1919px) {
+    .header-services{
+        padding: 50px 60px 60px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .header{
+        flex-direction: column;
+        position: relative;
+        padding-top: 65px;
+        align-items: flex-start;  
+    }
+    .header__line{
+        position: absolute;
+        top: 0;
+        left: -5px;
+    }
+    .header__line-services{
+        padding: 50px 0 0 60px;
+    }
+    .logo{
+        display: block;
+        margin-bottom: 35px;
+    }
+    .header-services{
+        padding: 100px 60px 60px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .header{
+        justify-content: space-between;
+        flex-direction: row;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    .header-services{
+        padding-top: 75px;
+    }
+    .address{
+        display: none;
+    }
+    .header__social-link{
+        display: none;
+    }
+    .header__line{
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 15px;
+        background: rgba(245, 245, 250, 0.2);
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-dot::after{
+        width: 0;
+        height: 0;
+    }
+    .logo{
+        width: 70px;
+        height: 32px;
+    }
+    .logo-services{
+        &::after{
+            content: 'services';
+            position: absolute;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            top: 0;
+            left: 128%;
+        }
+        &::before{
+            content: '/';
+            position: absolute;
+            width: 12px;
+            height: 26px;
+            color: $accent-color;
+            top: 1px;
+            left: 108%;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    
+    }
+}

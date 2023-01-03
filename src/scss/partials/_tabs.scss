@@ -1,0 +1,128 @@
+.tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 160px 60px;
+    &__list{
+        list-style: none;
+        margin: 0;
+        width: 30%;
+        padding: 14px 60px 0 120px;
+        border-right: 4px solid #686887;
+    }
+    &__item{
+        padding: 0 0 30px;
+        text-align: right;
+        list-style: none;
+    }
+    &__btn{
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 44px;
+        text-decoration: none;
+        color: $gray;
+        white-space: nowrap;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    &__btn.active{
+        background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    &__holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 73px 120px 60px 60px;
+        width: 70%;
+    }
+    &__content{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &__heading{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        margin: 0 0 30px;
+    }
+    &__text{
+        font-size: 19px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1919px) {
+    .tabs__list{
+        width: 40%;
+        padding: 14px 60px 0 20px;
+    }
+    .tabs__holder{
+        width: 60%;
+        padding: 0 20px 0 60px;
+    }
+}
+
+@media screen and (max-width:1439px) {
+    .tabs{
+        padding: 30px 60px 30px;
+    }
+    .tabs__list{
+        width: 50%;
+        padding: 14px 60px 0 0;
+    }
+    .tabs__holder{
+        width: 50%;
+        padding: 0 0 0 60px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .tabs{
+        flex-direction: column;
+        padding: 60px;
+    }
+    .tabs__list{
+        width: 100%;
+        border-right: none;
+        overflow: auto;
+        padding: 0 0 60px;
+        display: flex;
+        gap: 30px;
+    }
+    .tabs__item{
+        padding: 0;
+        box-sizing: content-box;
+    }
+    .tabs__holder{
+        width: 100%;
+        padding: 60px 0 0;
+        border-top: 4px solid #686887;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .tabs{
+        padding: 30px 30px 30px;
+    }
+    .tabs__holder{
+        padding: 30px 0 30px;
+    }
+    .tabs__list{
+        padding: 0 0 30px;
+    }
+    .tabs__btn{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .tabs__heading{
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,112 @@
+.publications{
+    background: #F5F5FA;
+    border-radius: 12px 12px 0px 0px;
+    padding: 30px 160px 0;
+    &__header{
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 44px;
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0 0 30px;
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #E6E6F0;
+    }
+    &__article{
+        background: $white;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    &__img{
+        object-fit: cover;
+        height: 200px;
+        flex-shrink: 0;
+    }
+    &__box{
+        padding: 30px;
+    }
+    &__heading{
+        margin: 0 0 15px;
+    }
+    &__link{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main-heading-color;
+        text-decoration: none;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    &__date{
+        display: block;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: $gray;
+        padding-bottom: 15px;
+        margin-bottom: 13px;
+        border-bottom: 4px solid #E6E6F0;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1919px) {
+    .publications{
+        padding: 30px 60px 0;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .publications__content{
+        grid-template-columns: 1fr 1fr;
+    }
+    .publications__article:last-child{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .publications{
+        padding: 30px 30px 0;
+    }
+    .publications__content{
+        grid-template-columns: 100% 100% 100%;
+    }
+    .publications__article:first-child{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .publications__article:nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .publications__article:last-child{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .publications__header{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+}
+
+

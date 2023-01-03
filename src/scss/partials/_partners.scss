@@ -1,0 +1,97 @@
+.partners{
+    padding: 0 100px 60px;
+    &__heading{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        color: #323264;
+        text-align: center;
+        margin: 0 0 30px;
+        text-align: center;
+    }
+    &__list{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    &__item{
+        width: 25%;
+        list-style: none;
+    }
+    &__link{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_hillel{
+            background: #1C4280;
+        }
+        &_wannabiz{
+            background: #143646;
+        }
+        &_tapgerine{
+            background: #F48B30;
+        }
+        &_3dlook{
+            background: #9E4DC3;
+        }
+        &_oranger{
+            background: #FD9339;
+        }
+        &_addteligent{
+            background: #E2E2E4;
+        }
+        &_clickky{
+            background: #C71C36;
+        }
+        &_ecolease{
+            background: #DCF3F9;
+        }
+        &_infra{
+            background: #EAEAEA;
+        }
+        &_city-park{
+            background: #282240;
+        }
+        &_art-print{
+            background: #1D4568;
+        }
+        &_ultimate{
+            background: #000000;
+        }
+    }
+}
+
+.partners-services{
+    padding-top: 60px;
+}
+
+@media screen and (max-width:1919px) {
+    .partners{
+        padding: 0;
+    }
+    .partners__list{
+        border-radius: 0;
+    }
+    .partners-services{
+        padding-top: 60px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+   .partners__item{
+    width: calc(100%/3);
+   }
+}
+
+@media screen and (max-width:767px) {
+    .partners__item{
+     width: 100%;
+    }
+ }

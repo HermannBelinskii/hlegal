@@ -1,0 +1,17 @@
+@import "partials/variables";
+@import "partials/nav";
+@import "partials/header";
+@import "partials/main";
+@import "partials/services";
+@import "partials/tabs";
+@import "partials/gallery";
+@import "partials/partners";
+@import "partials/publications";
+@import "partials/footer";
+
+body{
+    font: 400 19px/26px 'Montserrat', sans-serif;
+    color: $white;
+    margin: 0;
+    background: $white;
+}

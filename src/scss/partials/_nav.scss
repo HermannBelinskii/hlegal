@@ -1,0 +1,98 @@
+.nav{
+    @media screen and (max-width:767px) {
+        &.active{
+            position: relative;
+            .nav__list{
+                position: absolute;
+                top: 125%;
+                right: 15px;
+                background: $white;
+                padding: 40px 20px 20px;
+                display: block;
+                border-radius: 12px;
+            }
+            .nav__btn{
+                background: #E6E6F0;
+                border-radius: 8px;
+            }
+            .nav__item{
+                background: #F5F5FA;
+                border-radius: 12px;
+                margin-bottom: 15px;
+                padding: 10px;
+                text-align: center;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .nav__link{
+                color: #24A3FF;
+                &:hover{
+                    color: $accent-color;
+                    text-decoration: none;
+                }
+                &.active{
+                    color: $accent-color;
+                    text-decoration: none;
+                }
+            }
+        }
+        .nav__list{
+            display: none;
+        }
+        .nav__btn{
+            display: flex;
+        }
+    }
+    &__btn{
+        display: none;
+        flex-direction: column;
+        border: none;
+        width: 32px;
+        height: 32px;
+        padding: 9px 7px;
+        gap: 4px;
+        background: none;
+    }
+    &__btn-span{
+        display: block;
+        width: 18px;
+        height: 0;
+        border-bottom: 2px solid #FFFFFF;
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    &__item{
+        list-style: none;
+    }
+    &__link{
+        color: $white;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline solid $white 2px;
+            text-underline-offset: 10px;
+        }
+        &.active{
+            color: $accent-color;
+            text-decoration: underline solid $accent-color 2px;
+            text-underline-offset: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .nav__list{
+        display: none;
+    }
+    .nav__btn{
+        display: flex;
+    }
+}
